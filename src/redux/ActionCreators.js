@@ -9,9 +9,9 @@ import { baseUrl } from '../shared/baseUrl';
 }) */
 
 export const fetchMembers = () => (dispatch) => {
-
-    fetch(baseUrl + 'members').then((response) => {
+    fetch(baseUrl + 'shared/members').then((response) => {
         if (response.ok) {
+            console.log(response.body)
             return response;
         }
         else {
